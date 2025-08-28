@@ -77,12 +77,7 @@ LiveKit provides the voice interaction capabilities for Roku. Follow these steps
 
 ## ⚙️ Configuration
 
-1. **Copy the environment file**:
-   ```bash
-   cp .env.example .env
-   ```
-
-2. **Configure your API keys in `.env`**:
+1. **Edit the .env file** (located in your project root) with the following configuration:
    ```env
    # LiveKit Configuration (from your LiveKit project)
    LIVEKIT_URL=wss://your-project-name.livekit.cloud
@@ -109,14 +104,22 @@ LiveKit provides the voice interaction capabilities for Roku. Follow these steps
 
 ## ▶️ Running the Application
 
-1. **Start the LiveKit agent**:
-   ```bash
-   python agent.py
-   ```
+Roku can be run in two modes:
 
-2. **Access the web interface** (if available):
-   - Open your browser and navigate to the provided URL
-   - Start interacting with Roku through voice or text
+1. **Terminal Mode** (Console):
+   ```bash
+   python agent.py console
+   ```
+   This runs Roku directly in your terminal for text-based interaction.
+
+2. **LiveKit Playground Mode** (Development):
+   ```bash
+   python agent.py dev
+   ```
+   Then:
+   - Open the LiveKit background
+   - Choose "Connect to a project in LiveKit Cloud"
+   - Start interacting with Roku through voice using the LiveKit interface
 
 ## 💬 Usage
 
